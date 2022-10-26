@@ -31,5 +31,5 @@ def obtener_frases ():
     elif personaje == "Lisa Simpson":
       with open ('Maggie_Level/Lisa/Lisa.csv', 'a', newline='') as d:
         a=csv.DictWriter(d,data.keys())
-        
+
 obtener_frases ()
