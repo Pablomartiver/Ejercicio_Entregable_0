@@ -1,6 +1,6 @@
 FROM python:3.9.12
 COPY ./Maggie_Level.py /app/
-COPY ./Docker.txt /app/
+COPY ./requirements.txt /app/
 
 WORKDIR /app/
 RUN mkdir General
