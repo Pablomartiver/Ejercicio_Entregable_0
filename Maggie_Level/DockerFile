@@ -1,12 +1,13 @@
-FROM python 
+FROM 3.9.12
 
-COPY ./Maggie_Level.py/ /app/
-COPY ./docker.txt /app/
+COPY ./Maggie_Level.py /app/
+COPY ./Docker.txt /app/
 
 WORKDIR /app/
 RUN mkdir General
 RUN mkdir Homer
 RUN mkdir Lisa
-RUN pip3 install -r ./docker.txt
+RUN pip3 install -r ./Docker.txt
 
 CMD ["python","Maggie_Level.py"]
+
