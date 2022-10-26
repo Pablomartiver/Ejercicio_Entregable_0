@@ -1,4 +1,4 @@
-FROM 3.9.12
+FROM python:3.9.12
 
 COPY ./Maggie_Level.py /app/
 COPY ./Docker.txt /app/
