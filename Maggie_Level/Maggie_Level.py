@@ -42,5 +42,6 @@ def obtener_frases ():
         a=csv.DictWriter(d,data.keys())
 
 
+
 obtener_frases ()
 
