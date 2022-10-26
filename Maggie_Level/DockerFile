@@ -6,6 +6,6 @@ WORKDIR /app/
 RUN mkdir General
 RUN mkdir Homer
 RUN mkdir Lisa
-RUN pip3 install -r ./Docker.txt
+RUN pip3 install -r ./requeriments.txt
 
 CMD ["python", "Maggie_Level.py"]
