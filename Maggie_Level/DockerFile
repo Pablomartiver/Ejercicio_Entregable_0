@@ -8,4 +8,5 @@ RUN mkdir Homer
 RUN mkdir Lisa
 RUN pip3 install -r ./Docker.txt
 
+
 CMD ["python", "Maggie_Level.py"]
