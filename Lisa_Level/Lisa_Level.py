@@ -16,7 +16,6 @@ while True:
     frase=respuesta.json()[0]['quote']
     personaje=respuesta.json()[0]['character']
     imagen=respuesta.json()[0]['image']
-    frase_personaje = ['frase':frase,'personaje':personaje]
     #Ahora creamos un directorio para cada personaje
     try:
         os.mkdir(f'Personajes/{personaje}')
@@ -47,7 +46,7 @@ while True:
     #Por último, generamos los csv en la carpeta personaje para guardar las frase de cada personaje
     data = {"quote":frase,"character":personaje}
     nombre_csv = "Lisa_Leve/l" + personaje + "/" + personaje + ".csv"
-    with open (nombre_csv, 'a', newline ='') as f
+    with open (nombre_csv, 'a', newline ='') as f:
         a=csv.DictWriter (f,data.keys())
         a.writerow(data)
         
