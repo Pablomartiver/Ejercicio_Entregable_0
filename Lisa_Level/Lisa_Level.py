@@ -18,14 +18,14 @@ while True:
     imagen=respuesta.json()[0]['image']
     #Ahora creamos un directorio para cada personaje
     try:
-        os.mkdir(f'Personajes/{personaje}')
+        os.mkdir(f'Lisa_level/Personajes/{personaje}')
     except OSError as e:
         if e.errno != errno.EEXIST:
             raise
     #Ahora vamos a guardar cada imagen en su carpeta
     url = imagen
     nombre_imagen = "Lisa_Level/" + personaje + "/" + personaje + ".png"
-    r = requests.get(imagen, STREAM=True)
+    r = requests.get(imagen)
     with open (nombre_imagen, 'wb') as f:
         r.raw.decode_content = True
         shutil.copyfileobj(r.raw,f)
@@ -49,6 +49,7 @@ while True:
     with open (nombre_csv, 'a', newline ='') as f:
         a=csv.DictWriter (f,data.keys())
         a.writerow(data)
+        
         
 
    
